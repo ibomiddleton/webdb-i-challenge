@@ -18,7 +18,7 @@ router.get('/:id', (req, res) => {
     const { id } = req.params;
 
     db('accounts').where({ id })
-    .then(posts => {
+    .then(accounts => {
         const account = accounts[0];
     if (account) {
         res.json(account);
